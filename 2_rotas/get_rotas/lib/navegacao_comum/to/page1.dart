@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get_rotas/navegacao_comum/to/to_home_page.dart';
 
-class NavagacaoComumHomePage extends StatelessWidget {
-  const NavagacaoComumHomePage({super.key});
+import 'page2.dart';
+
+class Page1 extends StatelessWidget {
+  const Page1({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +13,7 @@ class NavagacaoComumHomePage extends StatelessWidget {
         backgroundColor: Colors.blue,
         shadowColor: Colors.blueGrey,
         title: const Text(
-          'Home Navegacão Comum',
+          'Page 1',
           style: TextStyle(color: Colors.white),
         ),
       ),
@@ -30,13 +31,11 @@ class NavagacaoComumHomePage extends StatelessWidget {
                 padding: const EdgeInsets.all(20),
               ),
               onPressed: () {
-                Get.to(ToHomePage());
+                Get.to(const Page2());
               },
               child: const Text(
-                'TO {Push}',
-                style: TextStyle(
-                  color: Colors.white,
-                ),
+                'Page 2',
+                style: TextStyle(color: Colors.white),
               ),
             ),
           ],
